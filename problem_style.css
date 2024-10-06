@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+.code_des{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.code_des .desc{
+    width: 40%;
+    border-radius: 5px;
+    background: rgba(176, 170, 170, 0.516);
+    height: 85vh;
+    padding: 10px;
+    overflow-y: scroll;
+    font-size: 1.2em;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+}
+.code_des .code{
+    width: 58%;
+    height: 85vh;
+}
+.code_des .code #editor{
+    width: 100%; 
+    height: 100%; 
+    border-radius: 5px;
+}
+/*----------------------------------------button styling-----------------------------------------------*/
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btns button{
+    background-color: #4CAF50; 
+    border: none;              
+    color: white;               
+    padding: 10px 20px;         
+    text-align: center;         
+    text-decoration: none;      
+    display: inline-block;      
+    font-size: 16px;            
+    margin: 8px 0;              
+    cursor: pointer;            
+    border-radius: 8px;         
+    transition-duration: 0.4s;  
+}
+.btns button:hover {
+    background-color: #38cc3dfd; 
+    color: white;         
+  }
+  .btns select {
+    width: 200px;                  
+    padding: 10px;                 
+    border-radius: 8px;            
+    background-color: #f2f2f2;     
+    color: #333;                  
+    border: 2px solid #4CAF50;     
+    font-size: 16px;                    
+    cursor: pointer;               
+    transition: background-color 1s ease; 
+    outline: none;                
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .btns select:focus {
+    border-color: #2e7d32;         /* Change border color on focus */
+    background-color: #e8f5e9;     /* Lighter background when focused */
+  }
+  
+  .btns select option {
+    color: #333;                   /* Text color inside options */
+    background-color: white;       /* Background color for each option */
+    padding: 8px;                  /* Padding for the options */
+  }
+  
+  /* Optional: Style for disabled options */
+  .btns select option[disabled] {
+    color: #999;                   /* Grey text for disabled option */
+  }
+  
+  /* Adding a custom arrow for the select */
+  .btns select::after {
+    content: '▼';                  /* Unicode for the down arrow */
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;          /* Prevent clicking the arrow */
+    font-size: 12px;
+  }
+  
+
+
+.sol_of_problem{
+    border: 2px solid;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 8px;
+
+}
+.sol_of_problem ul{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.sol_of_problem ul li{
+    list-style: decimal;
+}
+
+@media(max-width: 1000px){
+    .code_des{
+        display: flex;
+        flex-direction: column;
+    }
+    .code_des .desc{
+        width: 90vw;
+        margin-bottom: 20px;
+    }
+    #editor{
+        width: 100vw;
+    }
+    .code_des .code #editor{
+        width: 100%; 
+        height: 100%; 
+        border-radius: 5px;
+    }
+    
+}

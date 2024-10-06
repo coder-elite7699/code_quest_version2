@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accenture Aptitude</title>
+    <link rel="stylesheet" href="../../qna.css">
+    <link rel="stylesheet" href="../../top_banner.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Code Quest</h1>
+        <p>Accenture Aptitude</p> 
+        <button><a href="../../home.html">Home</a></button>
+    </div>
+    <div class="question">
+        <div class="container">
+            <p id="question_number">Question 1:</p>
+            <p id="ques_desc">A certain number of men take 45 days to complete work. If there are 10 men less
+                then they will take 60 days to complete the work. Find the original number of men.
+                <ul class="ul_list">
+                    <li>50</li>
+                    <li>60</li>
+                    <li>30</li>
+                    <li>40</li>
+                </ul>
+            </p>
+            <button class="btn" onclick="toggleSolution('solution1')">Show Solution</button>
+            <div id="solution1" class="solution"><p>Let us assume initially there are X men. Then x*45 = (x-10)*60. So we get x = 40</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 2:</p>
+            <p id="ques_desc">4 women and 5 men working together can do 3 times the work done by 2 women
+                and one man together. Calculate the work of a man to that of a woman.
+                 <ul class="ul_list">
+                    <li>1:1</li>
+                    <li>3:2</li>
+                    <li>1:2</li>
+                    <li>2:1</li>
+                </ul></p>
+            <button class="btn" onclick="toggleSolution('solution2')">Show Solution</button>
+            <div id="solution2" class="solution"><p>Given
+                4w + 5m = 3*(2w + m)
+                i.e. 2w = 2m
+                so the ratio of work done by man to woman is 1:1</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 3:</p>
+            <p id="ques_desc">5 men and 10 boys can do a piece of work in 30 days and 8 men and 12 boys can do
+                the work in 20 days then the ratio of daily work done by a man to that of a boy. <ul class="ul_list"><li>5:1</li>
+                <li>4:5</li>
+                <li>6:1</li>
+                <li>7:3</li></ul></p>
+            <button class="btn" onclick="toggleSolution('solution3')">Show Solution</button>
+            <div id="solution3" class="solution"><p>Given that, 5m + 10b = 1/30 and 8m + 12b = 1/20
+                after solving we get m = 1/200 and b = 1/1200
+                so required ratio = (1/200) : (1/1200) = 6:1</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 4:</p>
+            <p id="ques_desc">Manoj can do a work in 20 days, while Chandu can do the same work in 25 days.
+                They started the work jointly. A few days later Suresh also joined them and thus all of
+                them completed the whole work in 10 days. All of them were paid total Rs.1000. What
+                is the share of Suresh? <ul class="ul_list"><li>100</li>
+                <li>300</li>
+                <li>200</li>
+                <li>400</li></ul></p>
+            <button class="btn" onclick="toggleSolution('solution4')">Show Solution</button>
+            <div id="solution4" class="solution"><p>Efficiency of Manoj = 5%
+                The efficiency of Chandu = 4%
+                They will complete only 90% of the work = [(5+4)*10] =90
+                Remaining work was done by Suresh = 10%.
+                Share of Suresh = 10/100 * 1000 = 100</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 5:</p>
+            <p id="ques_desc">Nagarjuna lends Rs 30,000 of two of his friends. He gives Rs 15,000 to the first at
+                6% p.a. simple interest. He wants to make a profit of 10% on the whole. The simple
+                interest rate at which he should lend the remaining sum of money to the second friend
+                is <ul class="ul_list">
+                    <li>8%</li>
+                    <li>12%</li>
+                    <li>14%</li>
+                    <li>16%</li>
+                </ul></p>
+            <button class="btn" onclick="toggleSolution('solution5')">Show Solution</button>
+            <div id="solution5" class="solution"><p>Simple Interest on Rs 15000
+                =(15000×6×1)/100 = Rs. 900
+                Profit to made on Rs 30000
+                = 30000×10/100=Rs 3000
+                Simple Interest on Rs.15000 = 3000-900 = Rs.2100
+                Rate=(S.I.* 100)/(P * T)=(2100×100)/15000
+                =14% per annum
+                Therefore, the simple interest rate at which he should lend the remaining sum of money to
+                the second friend is 14%</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 6:</p>
+            <p id="ques_desc">A portion of $6600 is invested at a 5% annual return, while the remainder is invested
+                at a 3% annual return. If the annual income from the portion earning a 5% return is
+                twice that of the other portion, what is the total income from the two investments after
+                one year? <ul class="ul_list">
+                    <li>270</li>
+                    <li>250</li>
+                    <li>280</li>
+                    <li>200</li>
+                </ul></p>
+            <button class="btn" onclick="toggleSolution('solution6')">Show Solution</button>
+            <div id="solution6" class="solution"><p>According to the given data
+                5x + 3y = z (total)
+                x + y = 6600
+                5x= 2(3y) [ condition given] 5x – 6y = 0
+                x + y = 6600
+                5x -6y = 0
+                Subtract both equations and you get x = 3600 so y = 3000
+                3600*.05 = 180
+                3000*.03 = 90
+                z (total) = 270
+                Therefore, the total income from the two investments after one year = 270</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 7:</p>
+            <p id="ques_desc">In a group of 8 boys, 2 men aged at 21 and 23 were replaced, two new boys. Due to
+                this the average cost of the group increased by 2 years. What is the average age of
+                the 2 new boys? <ul class="ul_list">
+                    <li>17</li>
+                    <li>30</li>
+                    <li>28</li>
+                    <li>23</li>
+                </ul></p>
+            <button class="btn" onclick="toggleSolution('solution7')">Show Solution</button>
+            <div id="solution7" class="solution"><p>According to the given data
+                Average of 8 boys increased by 2, this means the total age of boys increased by 8*2 = 16
+                yrs
+                So sum of ages of two new boys = 21+23+16 = 60
+                Average of these = 60/2 = 30</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 8:</p>
+            <p id="ques_desc">While calculating the weight of a group of men, the weight of 63 kg of one of the
+                member was mistakenly written as 83 kg. Due to this the average of the weights
+                increased by half kg. What is the number of men in the group? <ul class="ul_list"><li>25</li>
+                <li>20</li>
+                <li>40</li>
+                <li>60</li></ul></p>
+            <button class="btn" onclick="toggleSolution('solution8')">Show Solution</button>
+            <div id="solution8" class="solution"><p>Increase in marks lead to an increase in average by 1/2
+                So (83-63) = x/2
+                x = 40
+                Therefore, the number of men in the group are 40</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 9:</p>
+            <p id="ques_desc">A Boat takes total 16 hours for traveling downstream from point A to point B and
+                coming back point C which is somewhere between A and B. If the speed of the Boat in
+                Still water is 9 Km/hr and the rate of stream is 6 Km/hr, then what is the distance
+                between A and C? <ul class="ul_list">
+                    <li>60 KM</li>
+                    <li>90 KM</li>
+                    <li>30 KM</li>
+                    <li>Cannot be determined</li>
+                </ul></p>
+            <button class="btn" onclick="toggleSolution('solution9')">Show Solution</button>
+            <div id="solution9" class="solution"><p>16 = D/9+6 + x/9-6, so cannot be determined</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 10:</p>
+            <p id="ques_desc">A Boat going upstream takes 8 hours 24 minutes to cover a certain distance, while
+                it takes 5 hours to cover 5/7 of the same distance running downstream. Then what is
+                the ratio of the speed of boat to speed of water current? <ul class="ul_list">
+                    <li>11:4</li>
+                    <li>11:6</li>
+                    <li>11:1</li>
+                    <li>6:5</li>
+                </ul></p>
+            <button class="btn" onclick="toggleSolution('solution10')">Show Solution</button>
+            <div id="solution10" class="solution"><p>(S-R)*42/5 = (S+R)*7
+                S:R = 11:1</p></div>
+        </div>
+    </div>
+
+    <script src="../../qna.js"></script>
+</body>
+</html>

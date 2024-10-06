@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ul_list{
+    padding-left: 40px;
+    list-style: upper-alpha;
+    margin-bottom: 20px;
+}
+/* Targeting the question section */
+.question {
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Styling each container */
+.container {
+    border-radius: 10px;
+    margin: 20px 40px;
+    padding: 40px;
+}
+
+/* Alternating background color for odd containers */
+.container:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.container:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+/* Styling the question number */
+#question_number {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Styling the question description */
+#ques_desc {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+#ques_desc ul{
+    border: 2px solid;
+    border: 2px solid;
+}
+
+/* Solution box styling */
+.solution {
+    display: none;
+    margin-top: 10px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Button styling */
+.btn {
+    padding: 7px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px 0px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}

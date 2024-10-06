@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.heading{
+    padding: 10px;
+    background-color: #2A3439;
+    min-height: 40vh;
+}
+h1{
+    padding: 10px;
+    font-size: 3.5em;
+    color: white;
+    margin-top: 60px;
+    margin: 40px;
+    position: relative;
+    transform: translate(0%, 50%);
+}
+/*------------Contributer name and link to profile--------------------------------*/
+#cintributer_name{
+    font-size: 22px;
+}
+#cintributer_name a{
+    color: white;
+}
+#cintributer_name a:hover{
+    color: #1977d5;
+}
+.heading button{
+    margin: 0;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+.heading p{
+    font-size: 2.2em;
+    color: white;
+    margin-left: 40px;
+    padding: 10px;
+    padding-left: 20px;
+}
+.heading button a{
+    display: inline-block;
+    padding: 10px 30px;
+}
+button{
+    margin: 27px;
+    border-radius: 6px;
+    border: none;
+    background: #1E90FF;
+}
+button:hover{
+    background: #1977d5;
+}
+button a{
+    display: inline-block;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterative Post Order Traversal</title>
+    <link rel="stylesheet" href="../template/template.css">
+    <link rel="stylesheet" href="../top_banner.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Code Quest</h1>
+        <p>Iterative Post Order Traversal</p> 
+        <button><a href="../home.html">Home</a></button>
+        <p id="cintributer_name">Contributer: <a href="">Pradeep Kumar</a></p>
+    </div>
+    <div class="wrapper">
+        <div class="problem_description">
+            <strong>Iterative Post Order Traversal</strong>
+            <p>You are given a binary tree. Your task is to return an array that conatins the Post Order Traversal. A Post Order Traversal is <strong>Left->Right->Root</strong></p>
+            <div class="example">
+                <p><strong>Example1:</strong></p>
+                <p><img src="tree_img/tree_example2.png" alt=""></p>
+                <p>Output: 6, 5, 4, 3, 2, 8, 10, 9, 7, 1</p>
+            </div>
+        </div>
+        <div class="code_Section">
+            <div id="editor"></div>
+        </div>
+    </div>
+    <div class="explanation">
+        <p class="sub_heading">Explanation</p>
+            <ul style="list-style: decimal;">
+                <li>Curr = root</li>
+                <li>Go as left as possible </li>
+                <li>moment curr==null, so our last node is top of stack</li>
+                <li>temp = stack.top()->right</li>
+                <li>Check temp->right == null</li>
+                <li>if right exist then curr = temp</li>
+                <li>If temp->right == null, which means we have traversed its left and right and its time to push this node into ans vector</li>
+                <li>Agian check if stack->top->right exist then push it into ans vector because all the nodes present in stack its left has been traversed</li>
+            </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
+    <script src="../template/template.js"></script>
+    <script>
+        var initialCode = ` //Preorder Traversal of binary Tree
+        
+#include<iostream>
+#include<stack>
+#include<vector>
+
+using namespace std;
+
+struct node{
+    int data;
+    struct node* left;
+    struct node* right;
+
+    node(int val){
+        data = val;
+        left = right = nullptr;
+    }
+};
+/*  Tree struture: 
+         12
+      23    34
+    56 67  10 80
+*/
+node* create_tree(){
+    struct node* root = new node(12);
+
+    root->left = new node(23);
+    root->right = new node(34);
+    
+    root->left->left = new node(56);
+    root->left->right =  new node(67);
+
+    root->right->left = new node(10);
+    root->right->right = new node(80);
+    return root;
+}
+
+vector<int> pre_order(node* root) {
+    vector<int> ans;
+    stack<node*> st;
+
+    if (root == nullptr) return ans;
+
+    st.push(root);
+
+    while (!st.empty()) {
+        node* temp = st.top();
+        st.pop();
+
+        ans.push_back(temp->data);
+
+        if (temp->right) st.push(temp->right);
+        if (temp->left) st.push(temp->left);
+    }
+    return ans;
+}
+
+
+int main(){
+    struct node* root = create_tree();
+    vector<int> ans = pre_order(root);
+    for(auto it: ans)cout<<it<<" ";
+    return 0;
+}
+  `;
+        var editor = ace.edit("editor");
+        editor.setValue(initialCode, -1);
+      </script>
+</body>
+</html>

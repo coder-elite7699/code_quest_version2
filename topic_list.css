@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*----------------------------------------problem list-----------------------------------------*/
+.problem_list {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.problem_list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.problem_list th, .problem_list td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.problem_list th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.problem_list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.problem_list tr:hover {
+    background-color: #f1f1f1;
+}
+
+.problem_list a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.problem_list a:hover {
+    text-decoration: underline;
+}
+
+.problem_list td:first-child {
+    width: 40px;
+    text-align: center;
+}

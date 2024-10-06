@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear Search</title>
+    <link rel="stylesheet" href="../problem_style.css">
+    <link rel="stylesheet" href="../top_banner.css">
+  </head>
+  <body>
+    <div class="heading">
+        <h1>Code Quest</h1>
+        <p>Linear Search</p> 
+        <button><a href="../home.html">Home</a></button>
+    </div>
+    <div class="btns">
+      <button>Download Code</button>
+      <button>Copy Code</button>
+      <button>Online Compiler</button>
+
+      <select id="languageSelect">
+        <option value="" disabled selected>Languages</option> <!-- Default option -->
+        <option value="js">JavaScript</option>
+        <option value="cpp">C++</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+      </select>
+
+      <select id="theme_select">
+        <option value="" disabled selected>Select Theme</option>
+        <option value="ace/theme/cobalt">Cobalt</option>
+        <option value="ace/theme/monokai">Monokai</option>
+        <option value="ace/themechrome-css">Chrome</option>
+        <option value="ace/theme/github">GitHub</option>
+        <option value="ace/theme/twilight">Twilight</option>
+        <option value="ace/theme/solarized_dark">Solarized Dark</option>
+        <option value="ace/theme/solarized_light">Solarized Light</option>
+      </select>
+
+        <select  id="font_size">
+          <option value="" disabled selected>Font Size</option> <!-- Default option -->
+          <option value="12px">12px</option>
+          <option value="14px">14px</option>
+          <option value="16px">16px</option>
+          <option value="18px">18px</option>
+          <option value="20px">20px</option>
+          <option value="22px">22px</option>
+        </select>
+    </div>
+    <div class="code_des">
+      <div class="desc">
+        <strong>Problem</strong>
+        <p>
+          Here will be problem description
+        </p>
+        <p>
+          <strong>Example 1:</strong> <br />
+          <code>arr = [8, 2, 3, 4, 5, 7, 1, 2, 6, 9, 8, 5, 5]</code> <br />
+          <code>target = 5</code> <br />
+          <strong>Output:</strong> 4 <br />
+          <strong>Explanation:</strong> The number 5 occurs multiple times, but
+          index 4 is where it occurs for the first time.
+        </p>
+        <hr>
+        <p>
+          <strong>Example 2:</strong> <br />
+          <code>arr = [8, 2, 3, 4, 5, 1, 2, 6, 9, 8, 5, 5]</code> <br />
+          <code>target = 7</code> <br />
+          <strong>Output:</strong> -1 <br />
+          <strong>Explanation:</strong> The number 7 does not exist in the
+          array, so return -1.
+        </p>
+      </div>
+      <div class="code">
+        <div id="editor"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
+    <script src="../problem_script.js"></script>
+    <script>
+      var initialCode = ` //Linear search
+#include<bits/stdc++.h>
+using namesapce std;
+int linear_search(vector<int> &arr, int k){
+    int n = arr.size();
+    for(int i=0;i<n;i++){
+        if(arr[i]==k)return i;
+  }
+    return -1;
+}
+int main(){
+    vector<int> arr = {8,6,4,2,5,7,9,1,3};
+    int ans = linear_search(arr, 7);
+    cout<<ans<<endl;
+    return 0;
+    lorem10
+    lorem10
+    int linear_search(vector<int> &arr, int k){
+    int n = arr.size();
+    for(int i=0;i<n;i++){
+      if(arr[i]==k)return i;
+  }
+  return -1;
+}
+`;
+      var editor = ace.edit("editor");
+      editor.setValue(initialCode, -1); // -1 moves the cursor to the start
+    </script>
+  </body>
+</html>

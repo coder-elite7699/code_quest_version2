@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCS Aptitude</title>
+    <link rel="stylesheet" href="../../qna.css">
+    <link rel="stylesheet" href="../../top_banner.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Code Quest</h1>
+        <p>TCS Aptitude</p> 
+        <button><a href="../../home.html">Home</a></button>
+    </div>
+    <div class="question">
+        <div class="container">
+            <p id="question_number">Question 1:</p>
+            <p id="ques_desc">The water from one outlet, flowing at a constant rate, can fill the swimming pool in 9 hours.
+                The water from second outlet, flowing at a constant rate can fill up the same pool in
+                approximately in 5 hours. If both the outlets are used at the same time, approximately what is the
+                number of hours required to fill the pool?</p>
+            <button class="btn" onclick="toggleSolution('solution1')">Show Solution</button>
+            <div id="solution1" class="solution"><p>Assume tank capacity is 45 Liters. Given that the first pipe fills the tank in 9 hours. So its
+                capacity is 45 / 9 = 5 Liters/ Hour. Second pipe fills the tank in 5 hours. So its capacity is 45 / 5
+                = 9 Liters/Hour. If both pipes are opened together, then combined capacity is 14 liters/hour. To
+                fill a tank of capacity 45 liters, Both pipes takes 45 / 14 = 3.21 Hours.</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 2:</p>
+            <p id="ques_desc">If 75 % of a class answered the first question on a certain test correctly, 55 percent answered
+                the second question on the test correctly, and 20 percent answered neither of the questions
+                correctly, what percentage answered both correctly?</p>
+            <button class="btn" onclick="toggleSolution('solution2')">Show Solution</button>
+            <div id="solution2" class="solution"><p>It is a problem belongs to sets. We use the following formula n(A∪∪B) = n(A) + n(B) - n(A∩∩B)
+                Here n(A U B) is the people who answered atleast one of the questions.
+                It was given that 20% answered neither question then the students who answered atleast one
+                question is 100% - 20% = 80%
+                Now substituting in the formula we get 80% = 75% + 55% - n(A∩∩B)
+                ⇒⇒ n(A∩∩B) = 50%</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 3:</p>
+            <p id="ques_desc">A student's average ( arithmetic mean) test score on 4 tests is 78. What must be the students
+                score on a 5th test for the students average score on the 5th test to be 80?</p>
+            <button class="btn" onclick="toggleSolution('solution3')">Show Solution</button>
+            <div id="solution3" class="solution"><p>We know that Average =Sum of the observations No of observations=Sum of the
+                observations No of observations
+                So Sum of 4 test scores = 78××4=312
+                Sum of 5 tests scores = 80××5=400
+                ⇒⇒ 5th test score=400-312=88</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 4:</p>
+            <p id="ques_desc">Rural households have more purchasing power than do urban households at the same income
+                level, since some of the income urban and suburban households use for food and shelter can be
+                used by the rural households for other needs. Which of the following inferences is best supported
+                by the statement made above?
+            <ul class="ul_list">
+                <li>The average rural household includes more people than does the average urban or suburban
+                    household.</li>
+                <li>Rural households have lower food and housing costs than do either urban or suburban
+                    households.</li>
+                <li>Suburban households generally have more purchasing power than do either rural or urban
+                    households</li>
+                <li>The median income of urban and suburban households is generally higher than that of rural
+                    households.</li>
+                <li>All three types of households spend more of their income on housing than on all other
+                    purchases combined.</li>
+            </ul></p>
+            <button class="btn" onclick="toggleSolution('solution4')">Show Solution</button>
+            <div id="solution4" class="solution"><p>If average rural household includes more people, then how come they have more
+                purchasing power? Infact, they have less purchasing power as they have to feed more
+                people. Option A ruled out.
+                Option C does not explain why rural households have more purchasing power than urban. Ruled
+                out.
+                If median income of urban and suburban households is generally higher than rural households
+                they are likely to have more purchasing power, assuming other parameters constant. But this
+                does not explain why rural households have more purchasing power. Options D ruled out.
+                Option E does not provide any explanation why rural households have more purchasing power.
+                Ruled out.
+                Option B is correct as, If rural households spend less income on food and shelter due to less
+                prices they definitely have more disposable income to spend.</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 5:</p>
+            <p id="ques_desc">Jose is a student of horticulture in the University of Hose. In a horticultural experiment in his
+                final year, 200 seeds were planted in plot I and 300 were planted in plot II. If 57% of the seeds in
+                plot I germinated and 42% of the seeds in plot II germinated, what percent of the total number of
+                planted seeds germinated?</p>
+            <button class="btn" onclick="toggleSolution('solution5')">Show Solution</button>
+            <div id="solution5" class="solution"><p>Total seeds germinated in Plot I = 57% of 200 = 114
+                Total seeds germinated in Plot II = 42% of 300 = 126
+                Total germinated seeds = 114 + 126 = 240
+                The percentage of germinated seeds of the total seeds = 240500×100240500×100 = 48%</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 6:</p>
+            <p id="ques_desc">A closed cylindrical tank contains 36ππ cubic feet of water and its filled to half its capacity.
+                When the tank is placed upright on its circular base on level ground, the height of water in the
+                tank is 4 feet. When the tank is placed on its side on level ground, what is the height, in feet, of
+                the surface of the water above the ground?</p>
+            <button class="btn" onclick="toggleSolution('solution6')">Show Solution</button>
+            <div id="solution6" class="solution"><p>We know that the volume of cylinder = πr2hπr2h
+                Given tank hight = 4ft.
+                ⇒⇒ πr24πr24 = 36ππ
+                ⇒⇒ r = 3
+                So the radius is 3 which means the diameter is 6.
+                As the cylinder is filled to initially exactly half of the capacity, When this cylinder is placed on its
+                side, Water comes upto the height of the radius.
+                So water comes upto 3 ft.
+                </p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 7:</p>
+            <p id="ques_desc">The present ratio of students to teachers at a certain school is 30 to 1. If the student
+                enrollment were to increase by 50 students and the number of teachers were to increase by 5,
+                the ratio of the teachers would then be 25 to 1 What is the present number of teachers?</p>
+            <button class="btn" onclick="toggleSolution('solution7')">Show Solution</button>
+            <div id="solution7" class="solution"><p>Assume the present students and teachers are 30K, K
+                After new recruitments of students and teachers the strength becomes 30K + 50, K + 5
+                respectively. But given that this ratio = 25 : 1
+                ⇒30K+50K+5=251⇒30K+50K+5=251
+                Solving we get K = 15
+                So present teachers are 15.</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 8:</p>
+            <p id="ques_desc">College T has 1000 students. Of the 200 students majoring in one or more of the sciences,130
+                are majoring in Chemistry and 150 are majoring in Biology. If at least 30 of the students are not
+                majoring in either Chemistry or Biology, then the number of students majoring in both Chemistry
+                and Biology could be any number from</p>
+            <button class="btn" onclick="toggleSolution('solution8')">Show Solution</button>
+            <div id="solution8" class="solution"><p>If we assume exactly 30 students are not majoring in any subject then the students who take
+                atleast one subject = 200 - 30 = 170
+                We know that n(A∪B) = n(A) + n(B) - n(A∩∩B)
+                ⇒⇒ 170 = 130 + 150 - n(A∩∩B)
+                Solving we get n(A∩∩B) = 110.
+                i.e., Students who can take both subjects are 110
+                But If more than 30 students are not taking any subject, what can be the maximum number of
+                students who can take both the subjects?
+                As there are 130 students are majoring in chemistry, assume these students are taking biology
+                also. So maximum students who can take both the subjects is 130 So the number of students who can take both subjects can be any number from 110 to 130.</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 9:</p>
+            <p id="ques_desc">Kelly and Chris are moving into a new city. Both of them love books and thus packed several
+                boxes with books. If Chris packed 60% of the total number of boxes, what was the ratio of the
+                number of boxes Kelly packed to the number of boxes Chris packed?</p>
+            <button class="btn" onclick="toggleSolution('solution9')">Show Solution</button>
+            <div id="solution9" class="solution"><p>Simple questions. If chris packs 60% of the boxes, kelly packs remaining 40%
+                So Kelly : Chris = 40% : 60% = 2 : 3</p></div>
+        </div>
+        
+        <div class="container">
+            <p id="question_number">Question 10:</p>
+            <p id="ques_desc">Among a group of 2500 people, 35 percent invest in municipal bonds, 18 percent invest in oil
+                stocks, and 7 percent invest in both municipal bonds and oil stocks. If 1 person is to be randomly
+                selected from 2500 people, what is the probability that the person selected will be one who
+                invests in municipal bonds but not in oil stocks?</p>
+            <button class="btn" onclick="toggleSolution('solution10')">Show Solution</button>
+            <div id="solution10" class="solution"><p>Here 2500 is redundant From the diagram we know that only ones who invested in municipal bonds are 28%, the
+                probability is 28 / 100 = 7/25</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question11 :</p>
+            <p id="ques_desc">Machine A produces bolts at a uniform rate of 120 every 40 second, and Machine B
+                produces bolts at a uniform rate of 100 every 20 seconds. If the two machines run
+                simultaneously, how many seconds will it take for them to produce a total of 200 bolts?</p>
+            <button class="btn" onclick="toggleSolution('solution11')">Show Solution</button>
+            <div id="solution11" class="solution"><p>Machine A produces 120/40 = 3 bolts in 1 second and machine B produces 100/20 = 5 bolts
+                in one second.
+                Hence, both of them will produce 8 bolts per second.
+                Hence, they wil take 200/8 = 25 seconds to produce 200 bolts.</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 12:</p>
+            <p id="ques_desc">How many prime numbers between 1 and 100 are factors of 7150?</p>
+            <button class="btn" onclick="toggleSolution('solution12')">Show Solution</button>
+            <div id="solution12" class="solution"><p>7, 150 = 2×52×11×132×52×11×13
+                So there are 4 distinct prime numbers that are below 100</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question `13:</p>
+            <p id="ques_desc">Analyzing the good returns that Halocircle Insurance Pvt Ltd was giving, Ratika bought a 1-
+                year, Rs 10,000 certificate of deposit that paid interest at an annual rate of 8% compounded
+                semi-annually.What was the total amount of interest paid on this certificate at maturity?</p>
+            <button class="btn" onclick="toggleSolution('solution13')">Show Solution</button>
+            <div id="solution13" class="solution"><p>This is a question on compound interest to be calculated semi annually.
+                In the case of semi annual compounding, Interest rate becomes half and Number of periods
+                becomes 2 per year.So A = P(1+R100)n(1+R100)n
+                ⇒A=10,000(1+4100)2=10,000×2625⇒A=10,000(1+4100)2=10,000×2625
+                = 10,816
+                Interest = A - P = 10, 816 - 10,000 = 816</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 14:</p>
+            <p id="ques_desc">Juan is a gold medalist in athletics. In the month of May, if Juan takes 11 seconds to run y
+                yards, how many seconds will it take him to run x yards at the same rate?</p>
+            <button class="btn" onclick="toggleSolution('solution14')">Show Solution</button>
+            <div id="solution14" class="solution"><p>If juan takes 11 seconds to run Y yards, for 1 yard he will take 11 / y seconds. To run x
+                yards his time will be 11 / y ×× x = 11x/ y</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 15:</p>
+            <p id="ques_desc">A certain company retirement plan has a rule of 70 provision that allows an employee to
+                retire when the employee's age plus years of employment with the company total at least 70. In
+                what year could a female employee hired in 1986 on her 32nd birthday first be eligible to retire
+                under this provision?</p>
+            <button class="btn" onclick="toggleSolution('solution15')">Show Solution</button>
+            <div id="solution15" class="solution"><p>Answer</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 16:</p>
+            <p id="ques_desc">What is the closest approximation of (50.2*0.49)/199.8 ?</p>
+            <button class="btn" onclick="toggleSolution('solution16')">Show Solution</button>
+            <div id="solution16" class="solution"><p>For approximation (50.2××0.49)/199.8 can be taken as
+                50××0.5/200 = 25/200 = 1/8 = 0.125</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 17:</p>
+            <p id="ques_desc">Andalusia has been promoting the importance of health maintenance. From January 1,1991
+                to January 1,1993, the number of people enrolled in health maintenance organizations increased
+                by 15 percent. The enrollment on January 1,1993 was 45 million. How many million people(to the
+                nearest million) was enrolled in health maintenance organizations on January 1,1991?</p>
+            <button class="btn" onclick="toggleSolution('solution17')">Show Solution</button>
+            <div id="solution17" class="solution"><p>If a number K is to be increased by x % it should be multiplied by (100+x)100(100+x)100
+                So When the enrollment in January 1, 1991 is multiplied by (100+x)100(100+x)100 we got 45
+                million.
+                K×(100+15)100=45K×(100+15)100=45
+                K = 45×10011545×100115 = 39.13</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 18:</p>
+            <p id="ques_desc">What is the lowest possible integer that is divisible by each of the integers 1 through 7,
+                inclusive?</p>
+            <button class="btn" onclick="toggleSolution('solution18')">Show Solution</button>
+            <div id="solution18" class="solution"><p>If a number has to be divisible by each number from 1 to 7, that number should be L.C.M
+                of(1,2,3,4,5,6,7) = 420</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 19:</p>
+            <p id="ques_desc">If the area of a square region having sides of length 6 cms is equal to the area of a
+                rectangular region having width 2.5 cms, then the length of the rectangle, in cms, is</p>
+            <button class="btn" onclick="toggleSolution('solution19')">Show Solution</button>
+            <div id="solution19" class="solution"><p>Given Area of the square = Area of rectangle
+                ⇒a2=l.b⇒a2=l.b
+                Substituting the above values in the formula
+                ⇒62=l.2.5⇒62=l.2.5
+                ⇒⇒ l = 14.4 cm</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 20:</p>
+            <p id="ques_desc">A tank contains 10,000 gallons of a solution that is 5 percent sodium chloride by volume. If
+                2500 gallons of water evaporate from the tank, the remaining solution will be approximately what
+                percentage of sodium chloride?</p>
+            <button class="btn" onclick="toggleSolution('solution20')">Show Solution</button>
+            <div id="solution20" class="solution"><p>Sodium chloride in the original solution = 5% of 10,000 = 500
+                Water in the original solution = 10,000 - 500 = 9,500
+                If 2,500 Liters of the water is evaporated then the remaining water = 9,500 - 2,500 = 7,000
+                Sodium chloride concentration = 500500+7000×100500500+7000×100 = 6.67 %</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 21:</p>
+            <p id="ques_desc">After loading a dock, each worker on the night crew loaded 3/4 as many boxes as each
+                worker on the day of the crew. If the night crew has 4/5 as many workers as the day crew, what
+                fraction of all the boxes loaded by two crews did the day crew load?</p>
+            <button class="btn" onclick="toggleSolution('solution21')">Show Solution</button>
+            <div id="solution21" class="solution"><p>Assume the number of boxes loaded in dayshift is equal to 4, then the number of boxed loaded
+                in night shift = 3
+                Assume the worked on dayshift = 5, then workers on night shift = 4
+                So boxes loaded in day shift = 4 x 5 = 20, and boxes loaded in night shift = 3 x 4 = 12
+                so fraction of boxes loaded in day shift = 2020+12=582020+12=58</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 22:</p>
+            <p id="ques_desc">A bakery opened yesterday with its daily supply of 40 dozen rolls. Half of the rolls were sold
+                by noon and 80 % of the remaining rolls were sold between noon and closing time. How many
+                dozen rolls had not been sold when the bakery closed yesterday?</p>
+            <button class="btn" onclick="toggleSolution('solution22')">Show Solution</button>
+            <div id="solution22" class="solution"><p>If half of the rolls were sold by noon, the remaining are 50 % (40) = 20.
+                Given 80% of the remaining were sold after the noon to closing time
+                ⇒⇒ 80% (20) = 16
+                Unsold = 20 - 16 = 4</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 23:</p>
+            <p id="ques_desc">If N=4P, where P is a prime number greater than 2, how many different positive even divisors
+                does n have including n?</p>
+            <button class="btn" onclick="toggleSolution('solution23')">Show Solution</button>
+            <div id="solution23" class="solution"><p>N = 22×P122×P1
+                We know that total factors of a number which is in the format of aP×bQ×cR...aP×bQ×cR... = (P +
+                1). (Q + 1). (R + 1) .... = (2 + 1).(1 + 1) = 6
+                Also odd factors of any number can be calculated easily by not taking 2 and its powers.
+                So odd factors of 22×P122×P1 = the factors of P1P1 = (1 + 1) = 2
+                Even factors of the number = 6 - 2 = 4</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 24:</p>
+            <p id="ques_desc">A dealer originally bought 100 identical batteries at a total cost of q rupees. If each battery
+                was sold at 50 percent above the original cost per battery, then, in terms of q, for how many
+                rupees was each battery sold?</p>
+            <button class="btn" onclick="toggleSolution('solution24')">Show Solution</button>
+            <div id="solution24" class="solution"><p>Per battery cost = q / 100
+                If each battery is sold for 50% gain, then selling price
+                = CostPrice×(100+Gain100)CostPrice×(100+Gain100)
+                ⇒⇒ q100×(100+50100)=3q200q100×(100+50100)=3q200</p></div>
+        </div>
+        <div class="container">
+            <p id="question_number">Question 25:</p>
+            <p id="ques_desc">The price of lunch for 15 people was 207 pounds, including a 15 percent gratuity of service.
+                What was the average price per person, EXCLUDING the gratuity?</p>
+            <button class="btn" onclick="toggleSolution('solution25')">Show Solution</button>
+            <div id="solution25" class="solution"><p>Let the net price excluding the gratuity of service = x pounds
+                Then, total price including 15% gratuity of service = x×(100+15100)x×(100+15100) = 1.15 x
+                pounds
+                So, 1.15 x = 207 pounds
+                ⇒⇒ x = 207 / 1.15 = 180 pounds
+                Net price of lunch for each person = 180 / 15 = 12 pounds</p></div>
+        </div>
+        <div class="container">
+        <p id="question_number">Question 25:</p>
+        <p id="ques_desc">Question</p>
+        <button class="btn" onclick="toggleSolution('solution10')">Show Solution</button>
+        <div id="solution10" class="solution"><p>Answer</p></div>
+    </div>
+    </div>
+
+    <script src="../../qna.js"></script>
+</body>
+</html>

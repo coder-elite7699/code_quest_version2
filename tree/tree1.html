@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="../template/template.css">
+    <link rel="stylesheet" href="../top_banner.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Code Quest</h1>
+        <p>Recursive PreOrder Traversal</p> 
+        <button><a href="../home.html">Home</a></button>
+        <p id="cintributer_name">Contributer: <a href="">Pradeep Kumar</a></p>
+    </div>
+    <div class="wrapper">
+        <div class="problem_description">
+            <strong>Recursive PreOrder Traversal</strong>
+            <p>You are given a binary tree. Your task is to return an array that conatins the Preorder Traversal. A preorder Traversal is <strong>Root->Left->Right</strong></p>
+            <div class="example">
+                <p><strong>Example1:</strong></p>
+                <p><img src="tree_img/tree example.png" alt=""></p>
+                <p>Output: 1 2 3 4 8 9 7</p>
+                
+            </div>
+        </div>
+        <div class="code_Section">
+            <div id="editor"></div>
+        </div>
+    </div>
+    <div class="explanation">
+        <p class="sub_heading">Explanation</p>
+            <ul style="list-style: decimal;">
+                <li>Whenever you encounter a node print it.</li>
+                <li>Then check if left of current node exist if exist then move to that node and print it.</li>
+                <li>If at any moment left node doesnot exist the move to right and print it and repeat above step</li>
+            </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
+    <script src="../template/template.js"></script>
+    <script>
+        var initialCode = ` //Preorder Traversal of binary Tree
+        
+#include<iostream>
+#include<queue>
+#include<vector>
+
+using namespace std;
+/*----------------------------Driver Code------------------------ */
+
+struct node{
+    int data;
+    struct node* left;
+    struct node* right;
+
+    node(int val){
+        data = val;
+        left = right = nullptr;
+    }
+};
+/*
+Tree Structure
+     12
+  23     34
+56 67  10  80
+*/ 
+node* create_tree(){
+    struct node* root = new node(12);
+
+    root->left = new node(23);
+    root->right = new node(34);
+    
+    root->left->left = new node(56);
+    root->left->right =  new node(67);
+
+    root->right->left = new node(10);
+    root->right->right = new node(80);
+    return root;
+}
+/*---------------------------Driver Code ends here----------------------------*/
+
+
+void pre_order_traversal(node* root){ 
+    if(!root)return;
+
+    cout<<root->data<<" ";
+    pre_order_traversal(root->left);
+    pre_order_traversal(root->right);
+}
+
+int main(){
+    node* root = create_tree();
+    pre_order_traversal(root);
+    return 0;
+}
+  `;
+        var editor = ace.edit("editor");
+        editor.setValue(initialCode, -1);
+      </script>
+</body>
+</html>
