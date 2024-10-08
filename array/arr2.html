@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linear Search</title>
+    <title>Largest Element</title>
     <link rel="stylesheet" href="../top_banner.css">
     <link rel="stylesheet" href="../footer_style.css">
     <link rel="stylesheet" href="../template/template.css">
@@ -11,26 +11,24 @@
 <body>
     <div class="heading">
         <h1>Code Quest</h1>
-        <p>Linear Search</p> 
+        <p>Largest Element</p> 
         <button><a href="../index.html">Home</a></button>
         <p id="cintributer_name">Contributer: <a href="">Pradeep Kumar</a></p>
     </div>
     <div class="problem_description">
-        <strong>Linear Search</strong>
-        <p>You are given an array of integers and a number. Your task is to find wether given number exist in the array. If exist then return index of first occurence. Else if the given element doesnot occure then return -1</p>
+        <strong>Largest Element</strong>
+        <p>Your are given an array of positive integers. Your task is to find the largest element in the given array</p>
         <div class="example">
             <p><strong>Example1:</strong></p>
-            <p><code>arr = [1,4,11,19,25,36,39,40,42]</code></p>
-            <p>target = 19</p>
-            <p>output: 3</p>
-            <p>Explanation: The number 19 is present at index 3</p>
+            <p><code>arr = [78, 96, 14, 82, 35, 74, 6, 85, 2, 63, 64, 25]</code></p>
+            <p>output: 96</p>
+            <p>Explanation: The number 85 is largest in array</p>
         </div>
         <div class="example">
             <p><strong>Example2:</strong></p>
-            <p><code>arr = [1,4,11,19,25,36,39,40,42]</code></p>
-            <p>target = 20</p>
-            <p>output: -1</p>
-            <p>Explanation: 20 is not present in given array</p>
+            <p><code>arr = [45, 54, 62, 16, 25, 12, 65, 64, 52, 59, 44, 23]</code></p>
+            <p>output: 65</p>
+            <p>Explanation: 65 is largest element in the given array</p>
         </div>
     </div>
     <div class="code_Section">
@@ -39,32 +37,36 @@
     <div class="explanation">
         <p class="sub_heading">Explanation</p>
         <p><ul>
-            <li>Iterate the arra.</li>
-            <li>Ckeck if arr[i]==target</li>
-            <li>if matches return i</li>
-            <li>return -1</li>
+            <li>Initialize max = arr[0].</li>
+            <li>Iterate through the array starting from the second element.</li>
+            <li>For each element, check if arr[i] > max.</li>
+            <li>If true, update max to arr[i].</li>
+            <li>After the loop ends, max will hold the largest element.</li>
+            <li>Return max.</li>
         </ul></p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
     <script src="../template/template.js"></script>
     <script>
         var initialCode = `
-//Linear search in an array
-
 #include<iostream>
 #include<vector>
+#include<climits>
+
 using namespace std;
 
-int find_number(vector<int> &arr, int num){
+int largest_element(vector<int>&arr){
+    int maxi = INT_MIN;
+
     for(int i=0;i<arr.size();i++){
-        if(arr[i]==num)return i;
+        maxi = max(maxi, arr[i]);
     }
-    return -1;
+    return maxi;
 }
 
 int main(){
-    vector<int> arr = {71,85,46,93,28,64,27,29,81,83,49,45,68,61,32,22,21,12};
-    int ans = find_number(arr, 81);
+    vector<int>arr = {6,93,28,64,27,29,81,83,49,45,68,61,32};
+    int ans = largest_element(arr);
     cout<<ans<<endl;
     return 0;
 }
