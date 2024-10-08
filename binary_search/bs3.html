@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search</title>
+    <link rel="stylesheet" href="../template/template.css">
+    <link rel="stylesheet" href="../top_banner.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Code Quest</h1>
+        <p>Lower Bound</p> 
+        <button><a href="../../index.html">Home</a></button>
+        <p id="cintributer_name">Contributer: <a href="">Pradeep Kumar</a></p>
+    </div>
+    <div class="problem_description">
+        <strong>Lower Bound</strong>
+        <p >You are given a sorted array of integers and a number K.</p>
+        <p><u>Lower Bound:</u> Lower bound is a is lowest index where the number is greater than or equal to given target</p>
+        <div class="example">
+            <p><strong>Example1:</strong></p>
+            <p><code>arr = [1,4,11,19,25,36,39,40,42]</code></p>
+            <p>target = 18</p>
+            <p>output: 3</p>
+            <p>Explanation: The number 19 is greater than 18 and lowest in index</p>
+        </div>
+        <div class="example">
+            <p><strong>Example2:</strong></p>
+            <p><code>arr = [1,4,11,19,25,36,39,40,42]</code></p>
+            <p>target = 25</p>
+            <p>output: 4</p>
+            <p>Explanation: 25 is equal to target</p>
+        </div>
+    </div>
+    <div class="code_Section">
+        <div id="editor"></div>
+    </div>
+    <div class="explanation">
+        <p class="sub_heading">Explanation</p>
+        <p><ul>
+            <li>we will keep to pointer , low and high</li>
+            <li>low is initialize with 0, low=0</li>
+            <li>high is initialized with n-1, where n is the size of the array, high=n-1, which will be pointing to last element of the array</li>
+            <li>we will calculate mid = (low+high)/2</li>
+            <li>check wether arr[mid]==target</li>
+            <li> Consider three cases based on the comparison between `target` and `arr[mid]`</li>
+            <li>If `target` is smaller than `arr[mid]`, shift the `low` pointer to `mid + 1`. This narrows down our search
+                range to the left half of the array.</li>
+            <li>If `target` is greater than `arr[mid]`, shift the `high` pointer to `mid - 1`. This narrows down our search
+                range to the right half of the array.</li>
+            <li> If `target` equals `arr[mid]`, return `mid` as the lower bound because we've found an element that is less
+                than or equal to `target`.</li>
+            <li>Repeat the steps</li>
+        </ul></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
+    <script src="../template/template.js"></script>
+    <script>
+        var initialCode = `
+// lower bound: number equal to target or just greater than that
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int binary_search(vector<int> &arr, int target){
+    int low = 0;
+    int high = arr.size()-1;
+    int ans = INT_MAX;
+
+    while(low<=high){
+        int mid = (low+high)/2;
+        
+        if(arr[mid]==target)return arr[mid];
+        if(arr[mid]>target && arr[mid]<ans) ans = arr[mid];
+        if(arr[mid]>target){
+            high = mid-1;
+        }
+        else{
+            low = mid+1;
+        }
+    }
+    return ans;
+}
+
+int main(){
+    vector<int> arr  = {3,5,8,15,19};
+    int ans = binary_search(arr, 7);
+    cout<<ans<<endl;
+    return 0;
+}
+  `;
+        var editor = ace.edit("editor");
+        editor.setValue(initialCode, -1);
+      </script>
+</body>
+</html>

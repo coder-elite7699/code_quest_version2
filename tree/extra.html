@@ -3,41 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inorder Traversal</title>
+    <title>Template</title>
     <link rel="stylesheet" href="../template/template.css">
     <link rel="stylesheet" href="../top_banner.css">
 </head>
 <body>
     <div class="heading">
         <h1>Code Quest</h1>
-        <p>Recursive Inorder Traversal</p> 
+        <p>Recursive PreOrder Traversal</p> 
         <button><a href="../index.html">Home</a></button>
         <p id="cintributer_name">Contributer: <a href="">Pradeep Kumar</a></p>
     </div>
-    <div class="problem_description">
-        <strong>Recursive Inorder Traversal</strong>
-        <p>You are given a binary tree. Your task is to return an array that contains the Inorder Traversal. A Inorder Traversal is <strong>Left->Root->Right</strong></p>
-        <div class="example">
-            <p><strong>Example1:</strong></p>
-            <p><img src="tree_img/tree example.png" alt=""></p>
-            <p>Output: 3 2 4 1 5 7 9</p>
-            
+    <div class="wrapper">
+        <div class="problem_description">
+            <strong>Recursive PreOrder Traversal</strong>
+            <p>You are given a binary tree. Your task is to return an array that conatins the Preorder Traversal. A preorder Traversal is <strong>Root->Left->Right</strong></p>
+            <div class="example">
+                <p><strong>Example1:</strong></p>
+                <p><img src="tree_img/tree example.png" alt=""></p>
+                <p>Output: 1 2 3 4 8 9 7</p>
+                
+            </div>
         </div>
-    </div>
-    <div class="code_Section">
-        <div id="editor"></div>
+        <div class="code_Section">
+            <div id="editor"></div>
+        </div>
     </div>
     <div class="explanation">
         <p class="sub_heading">Explanation</p>
-        <p>Algorithm:
             <ul style="list-style: decimal;">
-                <li>Visit Left Subtree: Go as far to the left as possible, visiting each node in the left subtree.</li>
-                <li>Then Visit Current Node: Once you reach a leaf node (a node with no children), move to the current
-            node and visit it.</li>
-                <li>Finally, Visit Right Subtree: After visiting the current node, go as far to the right as possible,
-            visiting each node in the right subtree.</li>
+                <li>Whenever you encounter a node print it.</li>
+                <li>Then check if left of current node exist if exist then move to that node and print it.</li>
+                <li>If at any moment left node doesnot exist the move to right and print it and repeat above step</li>
             </ul>
-        </p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
     <script src="../template/template.js"></script>
@@ -49,7 +47,7 @@
 #include<vector>
 
 using namespace std;
-/*---------------------------------------Driver Code---------------------------------------- */
+/*----------------------------Driver Code------------------------ */
 
 struct node{
     int data;
@@ -80,15 +78,15 @@ node* create_tree(){
     root->right->right = new node(80);
     return root;
 }
-/*------------------------------------------Driver Code ends here--------------------------------------*/
+/*---------------------------Driver Code ends here----------------------------*/
 
 
-void inorder_traversal(node* root){
+void pre_order_traversal(node* root){ 
     if(!root)return;
 
-    inorder_traversal(root->left);
     cout<<root->data<<" ";
-    inorder_traversal(root->right);
+    pre_order_traversal(root->left);
+    pre_order_traversal(root->right);
 }
 
 int main(){

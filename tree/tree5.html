@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inorder Traversal</title>
+    <title>Post order Traversal</title>
     <link rel="stylesheet" href="../template/template.css">
     <link rel="stylesheet" href="../top_banner.css">
 </head>
 <body>
     <div class="heading">
         <h1>Code Quest</h1>
-        <p>Recursive Inorder Traversal</p> 
+        <p>Recursive Post order Traversal</p> 
         <button><a href="../index.html">Home</a></button>
         <p id="cintributer_name">Contributer: <a href="">Pradeep Kumar</a></p>
     </div>
     <div class="problem_description">
-        <strong>Recursive Inorder Traversal</strong>
-        <p>You are given a binary tree. Your task is to return an array that contains the Inorder Traversal. A Inorder Traversal is <strong>Left->Root->Right</strong></p>
+        <strong>Recursive Post order Traversal</strong>
+        <p>You are given a binary tree. Your task is to return an array that contains the Postorder Traversal. A Post order Traversal is <strong>Left->Right->Root</strong></p>
         <div class="example">
             <p><strong>Example1:</strong></p>
             <p><img src="tree_img/tree example.png" alt=""></p>
@@ -87,8 +87,8 @@ void inorder_traversal(node* root){
     if(!root)return;
 
     inorder_traversal(root->left);
-    cout<<root->data<<" ";
     inorder_traversal(root->right);
+    cout<<root->data<<" ";
 }
 
 int main(){
