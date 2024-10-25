@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Rotate bu one place</title>
+    <link rel="stylesheet" href="../top_banner.css">
+    <link rel="stylesheet" href="../footer_style.css">
+    <link rel="stylesheet" href="../template/template.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Code Quest</h1>
+        <p>Left Rotate bu one place</p> 
+        <button><a href="../index.html">Home</a></button>
+        <p id="cintributer_name">Contributer: <a href="">Pradeep Kumar</a></p>
+    </div>
+    <div class="problem_description">
+        <strong>Left Rotate by one place</strong>
+        <p>Your are given an array of integers. Your task is to return an array by roatating the array left by one place</p>
+        <div class="example">
+            <p><strong>Example1:</strong></p>
+            <p><code>arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]</code></p>
+            <p>output:</p>
+            <p>[2, 3, 4, 5, 6, 7, 8, 9, 1]</p>
+            <p>Explanation: Since it is said the we have to roatate the array one place. The first element of the array is placed at right and all the shifted towards left by one place</p>
+        </div>
+        <div class="example">
+            <p><strong>Example2:</strong></p>
+            <p><code>arr = [1, 4, 11, 19, 25, 36, 39, 40, 42]</code></p>
+            <p>Output: [4, 11, 19, 25, 36, 39, 40, 42, 1]</p>
+        </div>
+    </div>
+    <div class="code_Section">
+        <div id="editor"></div>
+    </div>
+    <div class="explanation">
+        <p class="sub_heading">Explanation</p>
+        <p><ul>
+            <li>Make a temporaray variable and store the first element of the array</li>
+            <li>Run a loop from 1 to N-1</li>
+            <li>Shift every element by one place: arr[i-1]=arr[i]</li>
+            <li>place the temporaray varaible value at last of the index</li>
+        </ul></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
+    <script src="../template/template.js"></script>
+    <script>
+        var initialCode = `
+// left rotate an array by k place, k is positive, K>0
+
+/*
+Algorithm:
+
+Brute Force Appraoch
+1. Make list
+2. Store K elements in it
+3. Shift the elements in original array K place left from index
+4. now form K-n-1 place the stored elemnts
+
+
+
+*/
+
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+vector<int> left_rotate(vector<int>&arr, int k){
+    int n = arr.size();
+    k = k%n;
+    vector<int> temp;
+    for(int i=0;i<k;i++){
+        temp.push_back(arr[i]);
+    }
+   
+    for(int i=k;i<n;i++){
+        arr[i-k]=arr[i];
+    }
+    for(int i=0;i<k;i++){
+        arr[i+n-k]=temp[i];
+    }
+
+    return arr;
+}
+
+int main(){
+    vector<int> arr = {1,2,3,4,5,6,7,8,9};
+    vector<int> ans = left_rotate(arr, 10);
+    for(auto it: ans)cout<<it<<" ";
+    return 0;
+}
+  `;
+        var editor = ace.edit("editor");
+        editor.setValue(initialCode, -1);
+      </script>
+    <div class="footer">
+        <div>
+            <p>Data Strutures:
+                <ul>
+                    <li><a href="">Array</a></li>
+                    <li><a href="">Binary Search</a></li>
+                    <li><a href="">String</a></li>
+                    <li><a href="">Linked List</a></li>
+                    <li><a href="">Stack</a></li>
+                    <li><a href="">Queue</a></li>
+                    <li><a href="">Tree</a></li>
+                    <li><a href="">Graph</a></li>
+                    <li><a href="">Dynamic Programming</a></li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <p>Company Wise Questions:
+                <ul>
+                    <li><a href="">TCS</a></li>
+                    <li><a href="">Wipro</a></li>
+                    <li><a href="">Accenture</a></li>
+                    <li><a href="">Tech Mahindra</a></li>
+                    <li><a href="">Infosys</a></li>
+                    <li><a href="">HCL Technology</a></li>
+                    <li><a href="">Capegmini</a></li>
+                    <li><a href="">Deloitte</a></li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <p>Core Subjects:
+                <ul>
+                    <li><a href="">Operating System</a></li>
+                    <li><a href="">DBMS</a></li>
+                    <li><a href="">Computer Network</a></li>
+                    <li><a href="">Computer Organization and Architecture</a></li>
+                    <li><a href="">Object Oriented Programming</a></li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <p>Aptitude:
+                <ul>
+                    <li><a href="">Average</a></li>
+                    <li><a href="">Percentage</a></li>
+                    <li><a href="">Alligation</a></li>
+                    <li><a href="">Time and Work</a></li>
+                    <li><a href="">Profit and Loss</a></li>
+                    <li><a href="">Pipe and Cistern</a></li>
+                    <li><a href="">Simple and Compound Interest</a></li>
+                    <li><a href="">Ratio and Proportion</a></li>
+                    <li><a href="">Time, Speed and Distance</a></li>
+                    <li><a href="">Boat and Streams</a></li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
+    <script src="../template/template.js"></script>
+</body>
+</html>
