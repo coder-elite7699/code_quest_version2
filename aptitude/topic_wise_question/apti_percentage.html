@@ -16,28 +16,68 @@
     <div class="question">
         <div class="container">
             <p id="question_number">Question 1:</p>
-            <p id="ques_desc">Question description 1</p>
+            <p id="ques_desc">If the salary of A is 50% more than the salary of B and 20% less than tha salary of C, the salary of C is what percentage more tha the salary of B.
+                <ul>
+                    <li>72.5</li>
+                    <li>82.50</li>
+                    <li>87.5</li>
+                    <li>None of These</li>
+                </ul>
+            </p>
             <button class="btn" onclick="toggleSolution('solution1')">Show Solution</button>
-            <div id="solution1" class="solution"><p>The answer is 4.</p></div>
+            <div id="solution1" class="solution">
+                <p>Assume that the salary of A is ₹100</p>
+                <p>Then the salary of B = Rs. 66.66</p>
+                <p>and salary of C = Rs. 125</p>
+                <p>Now the salaray of C is Rs. 58.33 more tha salary of B</p>
+                <p>%change = (58.33 x 100)/66.66 = 87.5%</p>
+            </div>
         </div>
         
         <div class="container">
             <p id="question_number">Question 2:</p>
-            <p id="ques_desc">Question description 2</p>
+            <p id="ques_desc">In a competitive examination, 55% of the student passed in VA and 60% of the students passed in QA. 25% of the students failed in both the subjects. If 400 Students passed n both the subjects what us the total number of students who took the examination?
+                <ul>
+                    <li>700</li>
+                    <li>800</li>
+                    <li>900</li>
+                    <li>1000</li>
+                </ul>
+            </p>
             <button class="btn" onclick="toggleSolution('solution2')">Show Solution</button>
-            <div id="solution2" class="solution"><p>The answer is 2.</p></div>
+            <div id="solution2" class="solution">
+                <p>This can be solved using ven diagram</p>
+                <p>Students passed both exams = 55+60-75 = 40%</p>
+                <p>This value is given to us to be equal to 400 studenst. Thus 40% students = 400 students</p>
+                <p>The answer is 1000</p>
+            </div>
         </div>
         
         <div class="container">
             <p id="question_number">Question 3:</p>
-            <p id="ques_desc">Question description 3</p>
+            <p id="ques_desc">Due to inflaltion the price of wheat increases by 25% abd as result a person can purchase 5Kg less wheat for Rs. 500. What was the initial price of wheat per kg?
+                <ul>
+                    <li>RS 24</li>
+                    <li>RS 25</li>
+                    <li>RS 20</li>
+                    <li>RS 24.5</li>
+                </ul>
+            </p>
             <button class="btn" onclick="toggleSolution('solution3')">Show Solution</button>
-            <div id="solution3" class="solution"><p>The answer is 3.</p></div>
+            <div id="solution3" class="solution">
+                <p>Since the price of wheat has gone up by 25% and the expenditure is kept constant at Rs500 we can say that the quantity would go down by 20%</p>
+                <p>But we are given that the consumption has gone down by 5Kg</p>
+                <p>Thus %kg = 20% of original consumption.</p>
+                <p>Hence the original consumption is 25Kg</p>
+                <p>Thus the original price = 500/25 = 20/kg</p>
+                <p>500/x - 500/1.25x = 5</p>
+                <p>x=Rs20/kg</p>
+            </div>
         </div>
         
         <div class="container">
             <p id="question_number">Question 4:</p>
-            <p id="ques_desc">Question description 4</p>
+            <p id="ques_desc">If 10% of A is equal to 11</p>
             <button class="btn" onclick="toggleSolution('solution4')">Show Solution</button>
             <div id="solution4" class="solution"><p>The answer is 4.</p></div>
         </div>
@@ -84,7 +124,6 @@
             <div id="solution10" class="solution"><p>The answer is 10.</p></div>
         </div>
     </div>
-
-    <script src="../qna.js"></script>
+    <script src="../../qna.js"></script>
 </body>
 </html>

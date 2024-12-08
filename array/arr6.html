@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Duplicates</title>
+    <link rel="stylesheet" href="../top_banner.css">
+    <link rel="stylesheet" href="../footer_style.css">
+    <link rel="stylesheet" href="../template/template.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Code Quest</h1>
+        <p>Move Duplicates</p> 
+        <button><a href="../index.html">Home</a></button>
+        <p id="cintributer_name">Contributer: <a href="">Pradeep Kumar</a></p>
+    </div>
+    <div class="problem_description">
+        <strong>Move Duplicates elements at the end of the array</strong>
+        <p>You are given an array of integers, containing duplicates elements.</p>
+        <p>Your task is to move the duplicates elemnts at the end of array</p>
+        <p>The starting of array should contain only unique elements</p>
+        <div class="example">
+            <p><strong>Example1:</strong></p>
+            <p><code>arr = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5]</code></p>
+            <p>output: [1, 2, 3, 4, 5, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4]</p>
+            <p>Explanation: 1, 2, 3, 4, 5 are are the actual elements of the array. All are repeated and they are pushed back</p>
+        </div>
+    </div>
+    <div class="code_Section">
+        <div id="editor"></div>
+    </div>
+    <div class="explanation">
+        <p class="sub_heading">Explanation</p>
+        <p><ul>
+           <li>Using two pointer approach</li>
+           <li>i and j pointer</li>
+           <li>i=0 : pointing to starting element</li>
+           <li>the first element is at correct position always</li>
+           <li>now i will move from j=1 to n</li>
+           <li> if at any moment arr[i]!=arr[j] then i will push that element next to ith element</li>
+           <li>increment the i</li>
+           <li>return the original array</li>
+        </ul></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
+    <script src="../template/template.js"></script>
+    <script>
+        var initialCode = `
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+int move_duplicates(vector<int>&arr){
+    int i=0;
+    for(int j=1;j<arr.size();j++){
+        if(arr[i]!=arr[j]){
+            arr[i+1]=arr[j];
+            i++;
+        }
+    }
+    return i+1;
+}
+
+int main(){
+    vector<int> arr = {5,5,5,5,5,7,7,7,7,7,7,8,8,8,8,8,8,9,9,9,9,9,10,10,10,10,10};
+    int ans = move_duplicates(arr);
+    cout<<ans<<endl;
+    return 0;
+}
+  `;
+        var editor = ace.edit("editor");
+        editor.setValue(initialCode, -1);
+      </script>
+    <div class="footer">
+        <div>
+            <p>Data Strutures:
+                <ul>
+                    <li><a href="">Array</a></li>
+                    <li><a href="">Binary Search</a></li>
+                    <li><a href="">String</a></li>
+                    <li><a href="">Linked List</a></li>
+                    <li><a href="">Stack</a></li>
+                    <li><a href="">Queue</a></li>
+                    <li><a href="">Tree</a></li>
+                    <li><a href="">Graph</a></li>
+                    <li><a href="">Dynamic Programming</a></li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <p>Company Wise Questions:
+                <ul>
+                    <li><a href="">TCS</a></li>
+                    <li><a href="">Wipro</a></li>
+                    <li><a href="">Accenture</a></li>
+                    <li><a href="">Tech Mahindra</a></li>
+                    <li><a href="">Infosys</a></li>
+                    <li><a href="">HCL Technology</a></li>
+                    <li><a href="">Capegmini</a></li>
+                    <li><a href="">Deloitte</a></li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <p>Core Subjects:
+                <ul>
+                    <li><a href="">Operating System</a></li>
+                    <li><a href="">DBMS</a></li>
+                    <li><a href="">Computer Network</a></li>
+                    <li><a href="">Computer Organization and Architecture</a></li>
+                    <li><a href="">Object Oriented Programming</a></li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <p>Aptitude:
+                <ul>
+                    <li><a href="">Average</a></li>
+                    <li><a href="">Percentage</a></li>
+                    <li><a href="">Alligation</a></li>
+                    <li><a href="">Time and Work</a></li>
+                    <li><a href="">Profit and Loss</a></li>
+                    <li><a href="">Pipe and Cistern</a></li>
+                    <li><a href="">Simple and Compound Interest</a></li>
+                    <li><a href="">Ratio and Proportion</a></li>
+                    <li><a href="">Time, Speed and Distance</a></li>
+                    <li><a href="">Boat and Streams</a></li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -3,65 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quest</title>
-    <link rel="stylesheet" href="home.css">
+    <title>Smallest Element</title>
+    <link rel="stylesheet" href="../top_banner.css">
+    <link rel="stylesheet" href="../footer_style.css">
+    <link rel="stylesheet" href="../template/template.css">
 </head>
 <body>
     <div class="heading">
-        <button><a href="">Login</a></button>
-        <h1>Code Quest</h1> 
+        <h1>Code Quest</h1>
+        <p>Smallest Element in an array</p> 
+        <button><a href="../index.html">Home</a></button>
+        <p id="cintributer_name">Contributer: <a href="">Pradeep Kumar</a></p>
     </div>
-    <div class="container">
-        <div>
-            <p id="container_heading">Practice Question Topic-wise.
-                <p>Array, String, Linked List, Stack, Queue, Binary Tree, Graph, Dynamic Programming</p>
-                <button><a href="dsa_problem_list/dsa_topic_list.html">See Problems</a></button>
+    <div class="problem_description">
+        <strong>Smallest Element in a given array</strong>
+        <p>You are given an array containing integers. Your task is to return the smallest element in the array</p>
+        <div class="example">
+            <p><strong>Example1:</strong></p>
+            <p><code>arr = [78, 96, 14, 82, 35, 74, 6, 85, 2, 63, 64, 25]</code></p>
+            <p>output: 2</p>
+            <p>Explanation: The number 2 is smallest in array</p>
         </div>
-        <img src="images/home_page_image/topic_wise.jpg" alt="">
-    </div>
-    <div class="container">
-        <div>
-            <p id="container_heading">Company wise curated questions</p>
-            <p> Problems asked in TCS, Infosys, Wipro, Tech Mahindra, Deloitte..... </p>
-            <button><a href="dsa_problem_list/company_wise_prob.html">Lets Prepare</a></button>
+        <div class="example">
+            <p><strong>Example2:</strong></p>
+            <p><code>arr = [45, 54, 62, 16, 25, 12, 65, 64, 52, 59, 44, 23]</code></p>
+            <p>output: 12</p>
+            <p>Explanation: 12 is smallest element in the given array</p>
         </div>
-        <img src="images/home_page_image/company_wise.png" alt="">
     </div>
-    <div class="container">
-        <div>
-            <p id="container_heading">Prepare for aptitude </p>
-            <p>Question related to Avergae, Percentages, Time-Work.....</p>
-        <button><a href="aptitude/apti_home.html">Aptitude Section</a></button>
-        </div>
-        <img src="images/home_page_image/aptitude.jpeg" alt="">
+    <div class="code_Section">
+        <div id="editor"></div>
     </div>
-    <div class="container">
-        <div>
-            <p id="container_heading">Learn Core CS </p>
-            <p>Computer Network, Database Management System(DBMS), Operating System realted questions</p>
-        <button><a href="core_cs/core_cs_home.html">Core CS</a></button>
-        </div>
-        <img src="images/home_page_image/core_cs.jpg" alt="">
+    <div class="explanation">
+        <p class="sub_heading">Explanation</p>
+        <p><ul>
+            
+            <li> Take a variable initializa it with INT_MAX say ans</li>
+            <li>INT_MAX is the maximum number</li>
+            <li>Start iterating the array</li>
+            <li>If number smaller than ans, update the ans variable</li>
+            <li>Once the iteration is complete , return the ans variable</li>
+        </ul></p>
     </div>
-    <div class="container">
-        <div>
-            <p>Discuss</p>
-            <p>Share intervew experinces, discuss about interview, problems</p>
-        <button><a href="">Share Your Experince</a></button>
-        </div>
-        <img src="images/home_page_image/chat.webp" alt="">
-    </div>
-    <div class="contribute">
-        <p>You can contrubute to this website in various ways:
-            <ul>
-                <li>Design new problem</li>
-                <li>Add questions asked in your interview</li>
-                <li>Write article</li>
-                <li>Credit for contribution will be given</li>
-            </ul>
-        </p>
-        <button><a href="">Contribute</a></button>
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
+    <script src="../template/template.js"></script>
+    <script>
+        var initialCode = `
+#include<iostream>
+#include<climits>
+#include<vector>
+
+using namespace std;
+
+int smallest_elements(vector<int>&arr){
+    int mini = INT_MAX;
+
+    for(int i=0;i<arr.size();i++){
+        mini = min(mini, arr[i]);
+    }
+    return mini;
+}
+
+int main(){
+    vector<int> arr = {29, 77, 15, 82, 68, 70, 93, 75, 66, 18, 30, 47};
+    int ans = smallest_elements(arr);
+    cout<<ans<<endl;
+    return 0;
+}
+  `;
+        var editor = ace.edit("editor");
+        editor.setValue(initialCode, -1);
+      </script>
     <div class="footer">
         <div>
             <p>Data Strutures:
@@ -119,11 +131,6 @@
                 </ul>
             </p>
         </div>
-    </div>
-    <div class="contact">
-        <p>This site is created and Maintained by Pradeep Kumar</p>
-        <p>For any query, suggestion and Contribution please contact</p>
-        <button><a href="">Contact</a></button>
     </div>
 </body>
 </html>

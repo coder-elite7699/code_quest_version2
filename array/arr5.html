@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Smallest Element</title>
+    <link rel="stylesheet" href="../top_banner.css">
+    <link rel="stylesheet" href="../footer_style.css">
+    <link rel="stylesheet" href="../template/template.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Code Quest</h1>
+        <p>Second Smallest Element in an array</p> 
+        <button><a href="../index.html">Home</a></button>
+        <p id="cintributer_name">Contributer: <a href="">Pradeep Kumar</a></p>
+    </div>
+    <div class="problem_description">
+        <strong>Second Smallest Element in a given array</strong>
+        <p>You are given an array containing integers. Your task is to return the second smallest element in the array</p>
+        <div class="example">
+            <p><strong>Example1:</strong></p>
+            <p><code>arr = [78, 96, 14, 82, 35, 74, 6, 85, 2, 63, 64, 25]</code></p>
+            <p>output: 14</p>
+            <p>Explanation: The number 2 is smallest in array and 14 is second smallest</p>
+        </div>
+        <div class="example">
+            <p><strong>Example2:</strong></p>
+            <p><code>arr = [45, 54, 62, 16, 25, 12, 65, 64, 52, 59, 44, 23]</code></p>
+            <p>output: 16</p>
+            <p>Explanation: 12 is smallest element in the given array and 16 is second smallest</p>
+        </div>
+    </div>
+    <div class="code_Section">
+        <div id="editor"></div>
+    </div>
+    <div class="explanation">
+        <p class="sub_heading">Explanation</p>
+        <p><ul>
+           <li>Take two variable, say mini and s_mini</li>
+           <li>Initialize each with maximum possible numbe, say INT_MAX</li>
+           <li>Iterate the array</li>
+           <li>If the element of array is smaller than mini, then store the value of mini in s_mini and update the mini</li>
+           <li>If number is not smaller than mini, check wether it is smaller tha s_mini and not equal to mini</li>
+           <li>If this is the case update the s_mini</li>
+           <li>return s_mini</li>
+        </ul></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.36.2/ace.js"></script>
+    <script src="../template/template.js"></script>
+    <script>
+        var initialCode = `
+#include<iostream>
+#include<vector>
+#include<climits>
+
+using namespace std;
+
+int second_smallest(vector<int>& arr) {
+    int smallest = INT_MAX;
+    int s_smallest = INT_MAX;
+
+    for (int i = 0; i < arr.size(); i++) {
+        if (arr[i] < smallest) {  
+            s_smallest = smallest;  
+            smallest = arr[i];
+        } 
+        else if (arr[i] < s_smallest && arr[i] != smallest) {  
+            s_smallest = arr[i];
+        }
+    }
+    return s_smallest;
+}
+
+int main() {
+    vector<int> arr = {10, 27, 56, 16, 94, 36, 79, 80, 68, 42, 22, 92};
+    int ans = second_smallest(arr);
+    cout << ans << endl;
+    return 0;
+}
+
+  `;
+        var editor = ace.edit("editor");
+        editor.setValue(initialCode, -1);
+      </script>
+    <div class="footer">
+        <div>
+            <p>Data Strutures:
+                <ul>
+                    <li><a href="">Array</a></li>
+                    <li><a href="">Binary Search</a></li>
+                    <li><a href="">String</a></li>
+                    <li><a href="">Linked List</a></li>
+                    <li><a href="">Stack</a></li>
+                    <li><a href="">Queue</a></li>
+                    <li><a href="">Tree</a></li>
+                    <li><a href="">Graph</a></li>
+                    <li><a href="">Dynamic Programming</a></li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <p>Company Wise Questions:
+                <ul>
+                    <li><a href="">TCS</a></li>
+                    <li><a href="">Wipro</a></li>
+                    <li><a href="">Accenture</a></li>
+                    <li><a href="">Tech Mahindra</a></li>
+                    <li><a href="">Infosys</a></li>
+                    <li><a href="">HCL Technology</a></li>
+                    <li><a href="">Capegmini</a></li>
+                    <li><a href="">Deloitte</a></li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <p>Core Subjects:
+                <ul>
+                    <li><a href="">Operating System</a></li>
+                    <li><a href="">DBMS</a></li>
+                    <li><a href="">Computer Network</a></li>
+                    <li><a href="">Computer Organization and Architecture</a></li>
+                    <li><a href="">Object Oriented Programming</a></li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <p>Aptitude:
+                <ul>
+                    <li><a href="">Average</a></li>
+                    <li><a href="">Percentage</a></li>
+                    <li><a href="">Alligation</a></li>
+                    <li><a href="">Time and Work</a></li>
+                    <li><a href="">Profit and Loss</a></li>
+                    <li><a href="">Pipe and Cistern</a></li>
+                    <li><a href="">Simple and Compound Interest</a></li>
+                    <li><a href="">Ratio and Proportion</a></li>
+                    <li><a href="">Time, Speed and Distance</a></li>
+                    <li><a href="">Boat and Streams</a></li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
