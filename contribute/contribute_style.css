@@ -1,0 +1,16 @@
+.contribute_content{
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.contribute_content .heading1{
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.heading2{
+    font-size: 22px;
+    padding-top: 10px;
+}
+ul{
+    padding-top: 8px;
+}
